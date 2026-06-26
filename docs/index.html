@@ -83,9 +83,67 @@
     </div>
   </div>
 
+  <!-- 功能架构图 -->
+  <div class="card">
+    <h2>四、功能架构图</h2>
+    <style>
+      .block-diagram { display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap; padding:20px 0; }
+      .func-box { border:2px solid #bbb; border-radius:10px; background:#fafbfc; padding:0; min-width:180px; }
+      .func-box .title { padding:10px 16px; font-weight:700; font-size:0.95em; text-align:center; border-radius:8px 8px 0 0; }
+      .func-box ul { list-style:none; padding:10px 16px; margin:0; font-size:0.82em; color:#555; }
+      .func-box li { padding:3px 0; }
+      .arrow { font-size:1.5em; color:#999; font-weight:bold; }
+      .arrow-label { font-size:0.75em; color:#999; text-align:center; }
+      .arrow-group { display:flex; flex-direction:column; align-items:center; }
+    </style>
+    <div class="block-diagram">
+      <div class="func-box">
+        <div class="title" style="background:#e8f0fe;color:#1a56db;">学生管理</div>
+        <ul>
+          <li>单个 / 批量添加</li>
+          <li>Excel导入 / 导出</li>
+          <li>搜索过滤</li>
+          <li>请假 / 销假</li>
+        </ul>
+      </div>
+      <div class="arrow-group">
+        <div class="arrow-label">提供学生数据</div>
+        <div class="arrow">──────→</div>
+        <div class="arrow-label">读取点名记录</div>
+        <div class="arrow">←──────</div>
+      </div>
+      <div class="func-box">
+        <div class="title" style="background:#fef7e0;color:#5f3e00;">课堂点名</div>
+        <ul>
+          <li>加权随机算法</li>
+          <li>救场机制</li>
+          <li>题目太难提示</li>
+          <li>继续提问流程</li>
+          <li>请假自动排除</li>
+          <li>课程 / 重置本轮</li>
+        </ul>
+      </div>
+      <div class="arrow-group">
+        <div class="arrow-label">提供点名记录</div>
+        <div class="arrow">──────→</div>
+      </div>
+      <div class="func-box">
+        <div class="title" style="background:#e6f4ea;color:#1e4620;">数据统计</div>
+        <ul>
+          <li>汇总卡片</li>
+          <li>学生排名表</li>
+          <li>点名频次分布</li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;color:#888;font-size:0.8em;margin-top:10px;">
+      数据流向：学生管理 ──学生数据──→ 课堂点名 ──点名记录──→ 数据统计
+    </p>
+  </div>
+
   <!-- 项目亮点 -->
   <div class="card">
-    <h2>四、项目亮点</h2>
+    <h2>五、项目亮点</h2>
     <ol>
       <li><strong>加权随机算法</strong>：权重 = 100/(被点名次数+1)，累积权重法选择，确保点名机会均等</li>
       <li><strong>双重智能救场机制</strong>：连续3人未答出 → 从高回答率学生中选取 → 救场3连败 → 提示"题目太难，建议老师讲解"</li>
@@ -96,7 +154,7 @@
 
   <!-- 系统架构 -->
   <div class="card">
-    <h2>五、系统架构</h2>
+    <h2>六、系统架构</h2>
     <div style="text-align:center;margin:20px 0;">
       <style>
         .arch-box { display:inline-block; padding:12px 22px; border-radius:8px; margin:5px; font-size:0.9em; font-weight:600; }
@@ -154,7 +212,7 @@
 
   <!-- 功能截图 -->
   <div class="card">
-    <h2>六、系统功能演示</h2>
+    <h2>七、系统功能演示</h2>
 
     <h3>学生管理界面</h3>
     <img src="student-panel.png" alt="学生管理界面" style="width:100%;max-width:800px;border:1px solid #e0e4ea;border-radius:8px;">
@@ -171,7 +229,7 @@
 
   <!-- 团队成员分工 -->
   <div class="card">
-    <h2>七、团队成员负责模块</h2>
+    <h2>八、团队成员负责模块</h2>
     <table>
       <tr><th>成员</th><th>角色</th><th>负责模块</th><th>核心文件</th></tr>
       <tr>
@@ -194,13 +252,13 @@
 
   <!-- Git仓库 -->
   <div class="card">
-    <h2>八、项目Git仓库</h2>
+    <h2>九、项目Git仓库</h2>
     <p class="repo-link">完整项目：<a href="https://github.com/qluliuliuliu/classroom-rollcall-system" target="_blank">github.com/qluliuliuliu/classroom-rollcall-system</a></p>
   </div>
 
   <!-- Git提交记录 -->
   <div class="card">
-    <h2>九、团队成员Git提交记录</h2>
+    <h2>十、团队成员Git提交记录</h2>
 
     <h3>刘凯文提交记录</h3>
     <img src="git-leader.png" alt="组长Git提交记录" style="width:100%;max-width:800px;border:1px solid #e0e4ea;border-radius:8px;">
