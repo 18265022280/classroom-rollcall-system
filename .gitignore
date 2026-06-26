@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+out/
+
+# 编译产物
+bin/
+
+# 数据文件
+*.dat
+
+# 第三方库
+lib/
